@@ -51,8 +51,8 @@ export class UserFormComponent implements OnInit {
     return this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      latitude: ['', [Validators.required, Validators.min(-90), Validators.max(90)]],
-      longitude: ['', [Validators.required, Validators.min(-180), Validators.max(180)]],
+      latitude: [0, [Validators.required, Validators.min(-90), Validators.max(90)]],
+      longitude: [0, [Validators.required, Validators.min(-180), Validators.max(180)]],
       age: [0, [Validators.required, Validators.min(1), Validators.max(100)]],
       email: ['', [Validators.required, Validators.email]],
       isActive: [true]
