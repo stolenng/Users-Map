@@ -1,0 +1,25 @@
+.uppercase {
+    text-transform: capitalize;
+}
+
+.user-picture {
+    width:100px;
+    min-height: 50px;    
+    height: 100%;
+    display: inline-block;
+}
+
+.user-picture img {
+    max-width: 100%;
+}
+
+.user-item {
+    display: flex;
+}
+
+.user-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    width: 260px;
+}

@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.user-list {
+    max-height: 100vh;
+    overflow: scroll;
+    flex : 1;
+    flex-basis: 45%;
+}
+
+.user-form {
+    flex: 1;
+    flex-basis: 45%;
+}
+
+.map {
+    flex: 2;
+    flex-basis: 40%;
+}
+
+@media screen and (max-width: 575px) {
+    .wrapper {
+      flex-direction: column;
+    }
+  }

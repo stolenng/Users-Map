@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="user-list" [hidden]="!hideForm">
+    <user-actions [users]="users" (showForm)="toggleForm()" (sort)="sort($event)"></user-actions>
+    <user-list [users]="users" (remove)="remove($event)"></user-list>
+  </div>
+
+  <div class="user-form" [hidden]="hideForm">
+    <user-form (add)="add($event)" (closeForm)="toggleForm()"></user-form>
+  </div>
+
+  <div class="map">
+    <map [actions]="mapActions" [users]="users"></map>
+  </div>
+
+</div>

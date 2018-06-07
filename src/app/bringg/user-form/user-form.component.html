@@ -1,0 +1,63 @@
+<div class="user-form">
+  <h2>Add User Form</h2>
+  <i (click)="closeForm.emit()" class="fas fa-arrow-circle-left float-right"></i>
+
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+      />
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+      />
+      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Latitude</label>
+      <input type="number" formControlName="latitude" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.latitude.errors }"
+      />
+      <div *ngIf="submitted && f.latitude.errors" class="invalid-feedback">
+        <div *ngIf="f.latitude.errors.required">Latitude is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Longitude</label>
+      <input type="number" formControlName="longitude" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.longitude.errors }"
+      />
+      <div *ngIf="submitted && f.longitude.errors" class="invalid-feedback">
+        <div *ngIf="f.longitude.required">Longitude is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" formControlName="age" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.age.errors }" />
+      <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+        <div *ngIf="f.age.errors.required">Age is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+      />
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>isActive</label>
+      <input type="checkbox" formControlName="isActive" class="form-control" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </form>
+</div>

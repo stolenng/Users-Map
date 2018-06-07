@@ -1,0 +1,15 @@
+<div class="user-actions row">
+  <div class="col-3">
+      <span> Num of Users: {{users.length}} </span>
+  </div>
+  <div class="col-6">
+      <select class="form-control col-8" [(ngModel)]="sortType" name="userSort" id="userSort" (change)="update()">
+          <option value="">default</option>
+          <option value="age">age</option>
+          <option value="name">name</option>
+        </select>
+  </div>
+  <div class="col-3">
+      <button class="btn btn-md btn-info float-right" (click)="showForm.emit($event)">Add</button>        
+  </div>
+</div>
